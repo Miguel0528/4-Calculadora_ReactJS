@@ -1,15 +1,25 @@
+import { useState } from "react";
+
+
+
 
 
 function Calculator(){
 
-    const num = 1;
+    var [numero, definirNumero] = useState(0);
+
+
+
 
 
     return(
         <div>
-            <button className="w-[200px] h-[200px] bg-green-500">Adicionar</button>
+            <p>{numero}</p>
+            <br></br>
+            <button onClick={() => definirNumero(numero + 1)}>Adicionar</button>
+            <button onClick={() => definirNumero(numero = 0)}>Reiniciar</button>
         </div>
-    )
+    );
 
 
 
